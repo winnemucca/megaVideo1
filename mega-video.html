@@ -1,7 +1,17 @@
-<video controls>
-	<source 
+
+
+
+<!-- why did we drop the controlls -->
+<video controls
+	width="{{ video.width }}" 
+	height="{{ video.height }}" 
+	ng-click="video.togglePlay()" 
+	>
+
+	<source  
 		ng-repeat="source in sources" 
 		ng-src="{{ source.src }}" 
 		type="{{ source.type }}">
 	</source>
+
 </video>
